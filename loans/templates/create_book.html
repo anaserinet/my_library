@@ -1,0 +1,23 @@
+{% extends "base_page.html" %}
+
+{% block title %}
+My Library | Create Book
+{% endblock %}
+
+{% block content %}
+
+<html>
+
+<head>
+    <title> My Library | New book </title>
+</head>
+
+<body>
+    <h1> New book </h1>
+    <form action="{% url 'create_book' %}" method="post">
+        {% include "__book_form.html" with form=form submit_label="Create" %}
+    </form>
+</body>
+
+</html>
+{% endblock %}
